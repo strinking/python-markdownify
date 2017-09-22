@@ -61,7 +61,7 @@ class MarkdownConverter(object):
         # Convert the children first
         for el in node.children:
             if isinstance(el, NavigableString):
-                text += self.process_text(unicode(el))
+                text += self.process_text(str(el))
             else:
                 text += self.process_tag(el)
 
