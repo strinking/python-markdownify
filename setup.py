@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-import codecs
 import os
 from setuptools import setup, find_packages
 
 
 def read(filepath):
-    return codecs.open(filepath, 'r', 'utf-8').read()
+    with open(filepath) as f:
+        return f.read()
 
 
 setup(
